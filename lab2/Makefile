@@ -1,3 +1,4 @@
+
 sort:
 	go run main.go
 
@@ -13,5 +14,6 @@ clean:
 	rm -rf sr
 	rm -rf s
 	rm -rf si
-
-
+cfunc:
+	g++ qsort_test.cpp 
+	./a.out

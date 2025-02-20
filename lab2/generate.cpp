@@ -8,9 +8,9 @@ void gen_double_random_in_file(size_t size, double start, const char * file_name
 int main()
 {
     gen_double_sinus_in_file(30000,10,"si");
-    gen_double_random_in_file(300,10,"ra");
-    gen_double_sorted_in_file(300,10,"so", 0);
-    gen_double_sorted_in_file(100000,10,true,"sr" );
+    gen_double_random_in_file(1,10,"ra");
+    gen_double_sorted_in_file(1,10,0, "so");
+    gen_double_sorted_in_file(1,10,true,"sr" );
 
     return 0;
 }

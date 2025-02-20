@@ -8,18 +8,17 @@ import (
 	"os"
 	"strconv"
 	"strings"
-	"time"
 )
 
 func main() {
 	fmt.Println("QuickSortDuplicateKeys: \n")
-	check_quicks_sort[float64](sort_utils.QuickSortDuplicateKeys, "sr")
+	check_quicks_sort[float64](sort_utils.QuickSortDuplicateKeys, "si")
 
 	fmt.Println("QuickSortMedian: \n")
-	check_quicks_sort[float64](sort_utils.QuickSortMedian, "sr")
+	check_quicks_sort[float64](sort_utils.QuickSortMedian, "si")
 
-	check_sort_select("sr")
-	check_sort_merge("sr")
+	check_sort_select("si")
+	check_sort_merge("si")
 
 }
 
@@ -27,7 +26,7 @@ func check_quicks_sort[T ~int | ~float64](f func([]T) (uint32, []T), filename st
 	sliece := make([]T, 0, 100)
 	sliece = get_arr(sliece, filename)
 	var count uint32 = 0
-	var res_time time.Duration
+	var res_time float64
 
 	res_time, _ = sort_utils.TimeFunction(f, sliece, &count)
 	fmt.Println("Time :", res_time)
@@ -80,7 +79,7 @@ func check_sort_select(filename string) {
 func check_sort_merge(filename string) {
 	fmt.Println("Merge_sort:")
 	var count uint32 = 0
-	var res_time time.Duration
+	var res_time float64
 	sliece := make([]float64, 0, 100)
 	sliece = get_arr(sliece, filename)
 
@@ -115,6 +114,7 @@ func print_arr[T ~int | ~float64](s []T) {
 		fmt.Println(s[i])
 	}
 }
+
 func get_arr[T ~int | ~float64](s []T, filename string) []T {
 
 	file, err := os.Open(filename)
@@ -139,9 +139,7 @@ func get_arr[T ~int | ~float64](s []T, filename string) []T {
 				continue
 			}
 			s = append(s, T(number))
-			// fmt.Printf("%f ", number)
 		}
-		// fmt.Printf("\n")
 
 	}
 

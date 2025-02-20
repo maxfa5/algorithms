@@ -74,19 +74,19 @@ func SelectionSort[T ~int | ~float64](s []T) uint32 {
 	return count_op
 }
 
-func TimeFunction[T ~int | ~float64](f func([]T) (uint32, []T), slice []T, count_op *uint32) (res_time time.Duration, res []T) {
+func TimeFunction[T ~int | ~float64](f func([]T) (uint32, []T), slice []T, count_op *uint32) (res_time float64, res []T) {
 	startTime := time.Now()
 	*count_op, res = f(slice)
 	endTime := time.Now()
-	res_time = endTime.Sub(startTime)
+	res_time = float64(endTime.Sub(startTime)) / float64(time.Millisecond)
 	return res_time, res
 }
 
-func TimeFunction2[T ~int | ~float64](f func([]T) uint32, slice []T, count_op *uint32) time.Duration {
+func TimeFunction2[T ~int | ~float64](f func([]T) uint32, slice []T, count_op *uint32) float64 {
 	startTime := time.Now()
 	*count_op = f(slice)
 	endTime := time.Now()
-	return endTime.Sub(startTime)
+	return float64(endTime.Sub(startTime)) / float64(time.Millisecond)
 }
 
 func QuickSortMedian[T ~int | ~float64](arr []T) (uint32, []T) {
