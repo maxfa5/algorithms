@@ -6,6 +6,7 @@
 double *get_arr(long size);
 int compare_doubles(const void* a, const void* b);
 static long count_op = 0;
+
 int main(){
     srand(time(NULL));
     long size = 30000;

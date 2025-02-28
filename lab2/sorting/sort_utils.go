@@ -24,7 +24,6 @@ func merging[T ~int | ~float64](left_s []T, right_s []T) ([]T, uint32) {
 	j := 0
 	k := 0
 	for i < len(left_s) && j < len(right_s) {
-		count_op += 2
 
 		if left_s[i] < right_s[j] {
 			result[k] = left_s[i]
@@ -57,10 +56,8 @@ func SelectionSort[T ~int | ~float64](s []T) uint32 {
 	n := len(s)
 	var count_op uint32 = 0
 	for i := 0; i < n-1; i++ {
-		count_op++
 		min_index := i
 		for j := i + 1; j < n; j++ {
-			count_op++
 			if s[j] < s[min_index] {
 				count_op++
 				min_index = j
@@ -120,7 +117,6 @@ func partition[T ~int | ~float64](arr []T, left, right *int, count *uint32) int 
 	i := *left - 1
 
 	for j := *left; j < *right; j++ {
-		*count++
 		if arr[j] < pivot {
 			*count++
 			i++
@@ -179,7 +175,6 @@ func partition3Way[T ~int | ~float64](arr []T, left, right *int, count *uint32) 
 	i := *left   // arr[lt...i-1] == pivot
 
 	for i <= gt {
-		*count++
 		if arr[i] < pivot {
 			arr[lt], arr[i] = arr[i], arr[lt]
 			lt++
