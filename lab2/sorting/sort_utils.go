@@ -158,7 +158,6 @@ func quickSortDuplicateKeys[T ~int | ~float64](arr []T, left, right *int, count 
 	if *left < *right {
 		*count++
 		lt, gt := partition3Way(arr, left, right, count)
-
 		l := *left
 		r := lt - 1
 		quickSortDuplicateKeys(arr, &l, &r, count)
