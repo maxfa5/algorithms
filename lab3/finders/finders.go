@@ -67,7 +67,7 @@ func TwoJumpSearch(arr []float64, target float64, step1 int, step2 int, count_co
 	}
 
 	prev2 := prev1
-	for prev2 < int(math.Min(float64(prev1+step1), float64(n))) {
+	for prev2+step1 < n {
 		nextJump := int(math.Min(float64(prev2+step2), float64(n)))
 		if nextJump == n || arr[nextJump-1] >= target {
 			*count_comp++

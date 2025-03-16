@@ -14,44 +14,44 @@ import (
 func main() {
 	arr := make([]float64, 0, 100)
 	arr = get_arr(arr, "so")
-	// count_comp := 0
-	// fmt.Println(finders.Sequential_search(arr, 12, &count_comp))
-	// fmt.Println(finders.Sequential_search(arr, 44, &count_comp))
-	// fmt.Println(finders.Sequential_search(arr, 18, &count_comp))
-	// fmt.Println(finders.Sequential_search(arr, 786, &count_comp))
-	// fmt.Println(finders.Sequential_search(arr, 1000, &count_comp))
+	count_comp := 0
+	fmt.Println(finders.Sequential_search(arr, 12, &count_comp))
+	fmt.Println(finders.Sequential_search(arr, 44, &count_comp))
+	fmt.Println(finders.Sequential_search(arr, 18, &count_comp))
+	fmt.Println(finders.Sequential_search(arr, 786, &count_comp))
+	fmt.Println(finders.Sequential_search(arr, 1000, &count_comp))
 
-	// fmt.Printf("count compare: %d\n", (count_comp+5)/5)
-	// count_comp = 0
+	fmt.Printf("count compare для последовательного поиска: %d\n", (count_comp+5)/5)
+	count_comp = 0
 
-	// fmt.Println(finders.JumpSearch(arr, 12, int(math.Sqrt(float64(len(arr)))), &count_comp))
-	// fmt.Println(finders.JumpSearch(arr, 44, int(math.Sqrt(float64(len(arr)))), &count_comp))
-	// fmt.Println(finders.JumpSearch(arr, 18, int(math.Sqrt(float64(len(arr)))), &count_comp))
-	// fmt.Println(finders.JumpSearch(arr, 786, int(math.Sqrt(float64(len(arr)))), &count_comp))
-	// fmt.Println(finders.JumpSearch(arr, 1000, int(math.Sqrt(float64(len(arr)))), &count_comp))
+	fmt.Println(finders.JumpSearch(arr, 12, int(math.Sqrt(float64(len(arr)))), &count_comp))
+	fmt.Println(finders.JumpSearch(arr, 44, int(math.Sqrt(float64(len(arr)))), &count_comp))
+	fmt.Println(finders.JumpSearch(arr, 18, int(math.Sqrt(float64(len(arr)))), &count_comp))
+	fmt.Println(finders.JumpSearch(arr, 786, int(math.Sqrt(float64(len(arr)))), &count_comp))
+	fmt.Println(finders.JumpSearch(arr, 1000, int(math.Sqrt(float64(len(arr)))), &count_comp))
 
-	// fmt.Printf("count compare: %d\n", count_comp/5)
-	// count_comp = 0
+	fmt.Printf("count compare для 1уровневой прыжкового поиска : %d\n", count_comp/5)
+	count_comp = 0
 
-	// fmt.Println(finders.TwoJumpSearch(arr, 12, int(math.Pow(float64(len(arr)), 2.0/3.0)), int(math.Pow(float64(len(arr)), 1.0/3.0)), &count_comp))
-	// fmt.Println(finders.TwoJumpSearch(arr, 44, int(math.Pow(float64(len(arr)), 2.0/3.0)), int(math.Pow(float64(len(arr)), 1.0/3.0)), &count_comp))
-	// fmt.Println(finders.TwoJumpSearch(arr, 18, int(math.Pow(float64(len(arr)), 2.0/3.0)), int(math.Pow(float64(len(arr)), 1.0/3.0)), &count_comp))
-	// fmt.Println(finders.TwoJumpSearch(arr, 786, int(math.Pow(float64(len(arr)), 2.0/3.0)), int(math.Pow(float64(len(arr)), 1.0/3.0)), &count_comp))
-	// fmt.Println(finders.TwoJumpSearch(arr, 1000, int(math.Pow(float64(len(arr)), 2.0/3.0)), int(math.Pow(float64(len(arr)), 1.0/3.0)), &count_comp))
+	fmt.Println(finders.TwoJumpSearch(arr, 12, int(math.Sqrt(float64(len(arr)))), int(math.Sqrt(float64(math.Sqrt(float64(len(arr)))))), &count_comp))
+	fmt.Println(finders.TwoJumpSearch(arr, 44, int(math.Sqrt(float64(len(arr)))), int(math.Sqrt(float64(math.Sqrt(float64(len(arr)))))), &count_comp))
+	fmt.Println(finders.TwoJumpSearch(arr, 18, int(math.Sqrt(float64(len(arr)))), int(math.Sqrt(float64(math.Sqrt(float64(len(arr)))))), &count_comp))
+	fmt.Println(finders.TwoJumpSearch(arr, 786, int(math.Sqrt(float64(len(arr)))), int(math.Sqrt(float64(math.Sqrt(float64(len(arr)))))), &count_comp))
+	fmt.Println(finders.TwoJumpSearch(arr, 1000, int(math.Sqrt(float64(len(arr)))), int(math.Sqrt(float64(math.Sqrt(float64(len(arr)))))), &count_comp))
 
-	// fmt.Printf("count compare: %d\n", count_comp/5)
-	// count_comp = 0
+	fmt.Printf("count compare для 2уровневой прыжкового поиска : %d\n", count_comp/5)
+	count_comp = 0
 
-	// fmt.Println(finders.BinarySearch(arr, 12, &count_comp))
-	// fmt.Println(finders.BinarySearch(arr, 44, &count_comp))
-	// fmt.Println(finders.BinarySearch(arr, 18, &count_comp))
-	// fmt.Println(finders.BinarySearch(arr, 786, &count_comp))
-	// fmt.Println(finders.BinarySearch(arr, 1000, &count_comp))
+	fmt.Println(finders.BinarySearch(arr, 12, &count_comp))
+	fmt.Println(finders.BinarySearch(arr, 44, &count_comp))
+	fmt.Println(finders.BinarySearch(arr, 18, &count_comp))
+	fmt.Println(finders.BinarySearch(arr, 786, &count_comp))
+	fmt.Println(finders.BinarySearch(arr, 1000, &count_comp))
 
-	// fmt.Printf("count compare: %d\n", count_comp/5)
-	// count_comp = 0
+	fmt.Printf("count compare для бинарного посика : %d\n", count_comp/5)
+	count_comp = 0
 
-	//////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////
 
 	// count_comp := 0
 	// fmt.Println(finders.Sequential_search(arr, 11, &count_comp))
@@ -60,7 +60,7 @@ func main() {
 	// fmt.Println(finders.Sequential_search(arr, 785, &count_comp))
 	// fmt.Println(finders.Sequential_search(arr, 999, &count_comp))
 
-	// fmt.Printf("count compare: %d\n", (count_comp+5)/5)
+	// fmt.Printf("count compare для последовательного поиска: %d\n", (count_comp+5)/5)
 	// count_comp = 0
 
 	// fmt.Println(finders.JumpSearch(arr, 11, int(math.Sqrt(float64(len(arr)))), &count_comp))
@@ -69,16 +69,16 @@ func main() {
 	// fmt.Println(finders.JumpSearch(arr, 785, int(math.Sqrt(float64(len(arr)))), &count_comp))
 	// fmt.Println(finders.JumpSearch(arr, 999, int(math.Sqrt(float64(len(arr)))), &count_comp))
 
-	// fmt.Printf("count compare: %d\n", count_comp/5)
+	// fmt.Printf("count compare для 1уровневой прыжкового поиска : %d\n", count_comp/5)
 	// count_comp = 0
 
-	// fmt.Println(finders.TwoJumpSearch(arr, 11, int(math.Pow(float64(len(arr)), 2.0/3.0)), int(math.Pow(float64(len(arr)), 1.0/3.0)), &count_comp))
-	// fmt.Println(finders.TwoJumpSearch(arr, 43, int(math.Pow(float64(len(arr)), 2.0/3.0)), int(math.Pow(float64(len(arr)), 1.0/3.0)), &count_comp))
-	// fmt.Println(finders.TwoJumpSearch(arr, 17, int(math.Pow(float64(len(arr)), 2.0/3.0)), int(math.Pow(float64(len(arr)), 1.0/3.0)), &count_comp))
-	// fmt.Println(finders.TwoJumpSearch(arr, 785, int(math.Pow(float64(len(arr)), 2.0/3.0)), int(math.Pow(float64(len(arr)), 1.0/3.0)), &count_comp))
-	// fmt.Println(finders.TwoJumpSearch(arr, 999, int(math.Pow(float64(len(arr)), 2.0/3.0)), int(math.Pow(float64(len(arr)), 1.0/3.0)), &count_comp))
+	// fmt.Println(finders.TwoJumpSearch(arr, 11, int(math.Sqrt(float64(len(arr))), int(math.Sqrt(float64(len(arr))), &count_comp))
+	// fmt.Println(finders.TwoJumpSearch(arr, 43, int(math.Sqrt(float64(len(arr))), int(math.Sqrt(float64(len(arr))), &count_comp))
+	// fmt.Println(finders.TwoJumpSearch(arr, 17, int(math.Sqrt(float64(len(arr))), int(math.Sqrt(float64(len(arr))), &count_comp))
+	// fmt.Println(finders.TwoJumpSearch(arr, 785, int(math.Sqrt(float64(len(arr))), int(math.Sqrt(float64(len(arr))), &count_comp))
+	// fmt.Println(finders.TwoJumpSearch(arr, 999, int(math.Sqrt(float64(len(arr))), int(math.Sqrt(float64(len(arr))), &count_comp))
 
-	// fmt.Printf("count compare: %d\n", count_comp/5)
+	// fmt.Printf("count compare для 2уровневой прыжкового поиска : %d\n", count_comp/5)
 	// count_comp = 0
 
 	// fmt.Println(finders.BinarySearch(arr, 11, &count_comp))
@@ -87,24 +87,24 @@ func main() {
 	// fmt.Println(finders.BinarySearch(arr, 785, &count_comp))
 	// fmt.Println(finders.BinarySearch(arr, 999, &count_comp))
 
-	// fmt.Printf("count compare: %d\n", count_comp/5)
+	// fmt.Printf("count compare для бинарного посика : %d\n", count_comp/5)
 	// count_comp = 0
 
 	////////////////////////
 
-	count_comp := 0
-	for i := 0; i <= 11; i++ {
+	// count_comp := 0
+	// for i := 0; i <= 11; i++ {
 
-		fmt.Println(finders.JumpSearch(arr, 12, int(math.Pow(2, float64(i))), &count_comp))
-		fmt.Println(finders.JumpSearch(arr, 424, int(math.Pow(2, float64(i))), &count_comp))
-		fmt.Println(finders.JumpSearch(arr, 952, int(math.Pow(2, float64(i))), &count_comp))
-		fmt.Println(finders.JumpSearch(arr, 1086, int(math.Pow(2, float64(i))), &count_comp))
-		fmt.Println(finders.JumpSearch(arr, 2000, int(math.Pow(2, float64(i))), &count_comp))
+	// 	fmt.Println(finders.JumpSearch(arr, 12, int(math.Pow(2, float64(i))), &count_comp))
+	// 	fmt.Println(finders.JumpSearch(arr, 424, int(math.Pow(2, float64(i))), &count_comp))
+	// 	fmt.Println(finders.JumpSearch(arr, 952, int(math.Pow(2, float64(i))), &count_comp))
+	// 	fmt.Println(finders.JumpSearch(arr, 1086, int(math.Pow(2, float64(i))), &count_comp))
+	// 	fmt.Println(finders.JumpSearch(arr, 2000, int(math.Pow(2, float64(i))), &count_comp))
 
-		fmt.Printf("count compare: %d %d\n", count_comp/5, i)
-		count_comp = 0
+	// 	fmt.Printf("count compare: %d size of jump: %f\n", count_comp/5, math.Pow(2, float64(i)))
+	// 	count_comp = 0
 
-	}
+	// }
 }
 
 func get_arr[T ~int | ~float64](s []T, filename string) []T {
